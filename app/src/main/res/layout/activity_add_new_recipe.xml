@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/add_recipe_background"
+     >
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Take Picture"
+        android:id="@+id/takePic"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/menu_button_style"
+        android:onClick="takePicClicked"/>
+
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="85dp"
+        android:id="@+id/capPic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="70dp"
+        android:paddingLeft="70dp"
+        android:paddingTop="90dp"
+        android:paddingBottom="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:scrollbars = "vertical"
+            android:scrollbarStyle="insideInset"
+            android:id="@+id/scrollView">
+
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:stretchColumns="1"
+
+
+                >
+
+                <!-- everything else goes have -->
+               <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Recipe Name"
+                    android:id="@+id/recipeName"
+                    android:layout_centerVertical="true"
+                    android:textSize="18dp"
+                    android:textColor="#000000"
+                   android:paddingTop="30dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingredients"
+                    android:id="@+id/ingridients"
+                    android:textSize="18dp"
+                    android:textColor="#000000"
+                    android:inputType="textMultiLine"
+                    android:paddingTop="30dp">
+                </EditText>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Directions"
+                    android:id="@+id/direction"
+                    android:textSize="18dp"
+                    android:textColor="#000000"
+                    android:inputType="textMultiLine"
+                    android:paddingTop="30dp">
+                </EditText>
+
+
+
+            </TableLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="85dp"
+       >
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:id="@+id/addRecipe"
+            android:text="ADD"
+            android:background="@drawable/menu_button_style"
+            android:layout_alignParentBottom="true"
+            android:onClick="addClicked"
+            />
+
+
+
+
+        <!--       android:onClick="addRecipeButtonClicked" -->
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

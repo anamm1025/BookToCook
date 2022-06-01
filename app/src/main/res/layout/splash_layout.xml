@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <ImageView android:id="@+id/splashScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_img" />
+
+    <!--<TextView android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Book to Cook"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="#09ffe6"-->
+        <!--android:textStyle="bold|italic"-->
+        <!--android:textSize="@dimen/abc_text_size_large_material" />-->
+
+</LinearLayout>

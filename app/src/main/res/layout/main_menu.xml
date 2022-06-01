@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainMenu"
+    style="@style/Base.Theme.AppCompat"
+    android:clickable="false"
+    android:theme="@style/Widget.AppCompat.SearchView.ActionBar"
+    android:background="@drawable/menubackground">
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipeSearchView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:queryHint="Search for Recipes" />
+
+    <Button
+        android:textStyle="bold"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Categories"
+        android:id="@+id/categoriesButton"
+        android:layout_below="@+id/recipeSearchView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/menu_button_style"
+        android:textColor="#ffffff"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:onClick="categoriesClicked" />
+
+    <Button
+        android:textStyle="bold"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="All Recipies"
+        android:id="@+id/allRecipes"
+        android:layout_below="@+id/categoriesButton"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/menu_button_style"
+        android:textColor="#ffffff"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:onClick="allRecipesClicked"/>
+
+    <Button
+        android:textStyle="bold"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="My Recipes"
+        android:id="@+id/myRecipes"
+        android:layout_below="@+id/allRecipes"
+        android:layout_marginTop="16dp"
+        android:layout_alignRight="@+id/allRecipes"
+        android:layout_alignEnd="@+id/allRecipes"
+        android:background="@drawable/menu_button_style"
+        android:textColor="#ffffff"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:onClick="myRecipesClicked"
+        />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8275744125105354/3532105390" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/refresh"
+        android:id="@+id/refresh"
+        android:scaleType="fitXY"
+        android:onClick="RefreshClicked"
+        android:background="@drawable/image_pressed"
+        android:layout_alignTop="@+id/recipeSearchView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crash"
+        android:id="@+id/crashApp"
+        android:layout_above="@+id/ad_view"
+        android:layout_centerHorizontal="true"
+        android:onClick="crashApplication"
+        android:shadowColor="#A8A8A8"
+        android:textColor="#ffffff"
+        android:background="@drawable/menu_button_style" />
+
+</RelativeLayout>

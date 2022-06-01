@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="anam.com.listview">
+
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/applicationName"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+         <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".listActivity"
+            android:label="Categories">
+
+        </activity>
+        <activity
+            android:name=".RecipeDetailActivity"
+            android:label="Directions for Selected Recipe" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/applicationName"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainMenu" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1683576508564495"
+            android:exported="true" />
+
+        <activity android:name=".AboutActivity" />
+        <activity
+            android:name=".LoginToRecipes"
+            android:label="@string/title_activity_login_to_recipes" />
+        <activity
+            android:name=".AddNewRecipe"
+            android:label="@string/title_activity_add_new_recipe">
+        </activity>
+    </application>
+
+</manifest>
